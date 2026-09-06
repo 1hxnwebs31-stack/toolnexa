@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ToolNexa - Free Online Tools</title>
+
+    <meta name="description" content="ToolNexa offers simple and free online tools including Age Calculator, Percentage Calculator, Word Counter, and Password Generator. Fast, easy, and free to use.">
+
+    <meta name="keywords" content="online tools, free tools, age calculator, percentage calculator, word counter, password generator, ToolNexa">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YJd2-ZvGDuBugJtvPNj1D0_FzL76JkicQVMDOYS6WQ0" />
+
+    <meta property="og:title" content="ToolNexa - Free Online Tools">
+    <meta property="og:description" content="Simple and free online tools for everyday use.">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ToolNexa - Free Online Tools">
+    <meta name="twitter:description" content="Simple and free online tools for everyday use.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            color: #d1d5db;
+            font-size: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 25px auto 10px;
+            padding: 0 15px;
+        }
+
+        .intro h2 {
+            margin-bottom: 8px;
+            font-size: 24px;
+        }
+
+        .intro p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 25px auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #111827;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .result {
+            margin-top: 15px;
+            padding: 12px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            min-height: 20px;
+            line-height: 1.6;
+        }
+
+        .password-box {
+            margin-top: 15px;
+            padding: 12px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            word-break: break-all;
+            font-weight: bold;
+            min-height: 20px;
+        }
+
+        .options {
+            margin-top: 12px;
+        }
+
+        .options label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 8px 0;
+        }
+
+        .options input {
+            width: auto;
+        }
+
+        footer {
+            margin-top: 35px;
+            padding: 25px 15px;
+            background: #111827;
+            color: #d1d5db;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .intro h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>ToolNexa</h1>
+    <p>Simple &amp; Free Online Tools</p>
+</header>
+
+<section class="intro">
+    <h2>Free Online Tools for Everyone</h2>
+    <p>
+        ToolNexa provides simple, fast and free online tools for everyday needs.
+        Calculate your age, find percentages, count words and generate secure passwords.
+    </p>
+</section>
+
+<main class="container">
+
+    <section class="card">
+        <h2>🎂 Age Calculator</h2>
+        <p>Calculate your exact age in years, months and days.</p>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob">
+
+        <button onclick="calculateAge()">Calculate Age</button>
+
+        <div class="result" id="ageResult"></div>
+    </section>
+
+
+    <section class="card">
+        <h2>📊 Percentage Calculator</h2>
+        <p>Calculate the percentage of any number quickly.</p>
+
+        <label for="percentage">Percentage (%)</label>
+        <input type="number" id="percentage" placeholder="Example: 20">
+
+        <label for="number">Number</label>
+        <input type="number" id="number" placeholder="Example: 500">
+
+        <button onclick="calculatePercentage()">Calculate</button>
+
+        <div class="result" id="percentageResult"></div>
+    </section>
+
+
+    <section class="card">
+        <h2>📝 Word Counter</h2>
+        <p>Count words, characters and sentences in your text.</p>
+
+        <label for="textInput">Enter Your Text</label>
+        <textarea id="textInput" placeholder="Type or paste your text here..." oninput="countWords()"></textarea>
+
+        <div class="result" id="wordResult">
+            Words: 0<br>
+            Characters: 0<br>
+            Sentences: 0
+        </div>
+
+        <button onclick="clearText()">Clear Text</button>
+    </section>
+
+
+    <section class="card">
+        <h2>🔐 Password Generator</h2>
+        <p>Generate a strong and secure random password.</p>
+
+        <label for="length">
+            Password Length: <span id="lengthValue">16</span>
+        </label>
+
+        <input
+            type="range"
+            id="length"
+            min="6"
+            max="32"
+            value="16"
+            oninput="updateLength()"
+        >
+
+        <div class="options">
+
+            <label>
+                <input type="checkbox" id="uppercase" checked>
+                Uppercase Letters
+            </label>
+
+            <label>
+                <input type="checkbox" id="lowercase" checked>
+                Lowercase Letters
+            </label>
+
+            <label>
+                <input type="checkbox" id="numbers" checked>
+                Numbers
+            </label>
+
+            <label>
+                <input type="checkbox" id="symbols" checked>
+                Symbols
+            </label>
+
+        </div>
+
+        <button onclick="generatePassword()">Generate Password</button>
+
+        <div class="password-box" id="passwordResult">
+            Your password will appear here.
+        </div>
+
+        <button onclick="copyPassword()">Copy Password</button>
+    </section>
+
+</main>
+
+
+<footer>
+    © 2026 ToolNexa. All rights reserved.
+</footer>
+
+
+<script>
+
+    function calculateAge() {
+
+        const dobInput = document.getElementById("dob").value;
+        const result = document.getElementById("ageResult");
+
+        if (!dobInput) {
+            result.innerHTML = "Please select your date of birth.";
+            return;
+        }
+
+        const birthDate = new Date(dobInput);
+        const today = new Date();
+
+        if (birthDate > today) {
+            result.innerHTML = "Date of birth cannot be in the future.";
+            return;
+        }
+
+        let years = today.getFullYear() - birthDate.getFullYear();
+        let months = today.getMonth() - birthDate.getMonth();
+        let days = today.getDate() - birthDate.getDate();
+
+        if (days < 0) {
+            months--;
+
+            const previousMonth = new Date(
+                today.getFullYear(),
+                today.getMonth(),
+                0
+            );
+
+            days += previousMonth.getDate();
+        }
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        result.innerHTML =
+            "<strong>Your Age:</strong><br>" +
+            years + " Years, " +
+            months + " Months, " +
+            days + " Days";
+    }
+
+
+    function calculatePercentage() {
+
+        const percentage = parseFloat(
+            document.getElementById("percentage").value
+        );
+
+        const number = parseFloat(
+            document.getElementById("number").value
+        );
+
+        const result = document.getElementById("percentageResult");
+
+        if (isNaN(percentage) || isNaN(number)) {
+            result.innerHTML = "Please enter both values.";
+            return;
+        }
+
+        const answer = (percentage / 100) * number;
+
+        result.innerHTML =
+            "<strong>Result:</strong> " + answer;
+    }
+
+
+    function countWords() {
+
+        const text = document.getElementById("textInput").value;
+
+        const words = text.trim()
+            ? text.trim().split(/\s+/).length
+            : 0;
+
+        const characters = text.length;
+
+        const sentences = text.trim()
+            ? text.split(/[.!?]+/).filter(
+                sentence => sentence.trim().length > 0
+              ).length
+            : 0;
+
+        document.getElementById("wordResult").innerHTML =
+            "Words: " + words +
+            "<br>Characters: " + characters +
+            "<br>Sentences: " + sentences;
+    }
+
+
+    function clearText() {
+
+        document.getElementById("textInput").value = "";
+
+        countWords();
+    }
+
+
+    function updateLength() {
+
+        const length = document.getElementById("length").value;
+
+        document.getElementById("lengthValue").textContent = length;
+    }
+
+
+    function generatePassword() {
+
+        const length = parseInt(
+            document.getElementById("length").value
+        );
+
+        const useUppercase =
+            document.getElementById("uppercase").checked;
+
+        const useLowercase =
+            document.getElementById("lowercase").checked;
+
+        const useNumbers =
+            document.getElementById("numbers").checked;
+
+        const useSymbols =
+            document.getElementById("symbols").checked;
+
+        let characters = "";
+
+        if (useUppercase) {
+            characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        }
+
+        if (useLowercase) {
+            characters += "abcdefghijklmnopqrstuvwxyz";
+        }
+
+        if (useNumbers) {
+            characters += "0123456789";
+        }
+
+        if (useSymbols) {
+            characters += "!@#$%^&*()_+-=[]{}|;:,.<>?";
+        }
+
+        const result =
+            document.getElementById("passwordResult");
+
+        if (!characters) {
+            result.textContent =
+                "Please select at least one option.";
+            return;
+        }
+
+        let password = "";
+
+        const randomValues =
+            new Uint32Array(length);
+
+        crypto.getRandomValues(randomValues);
+
+        for (let i = 0; i < length; i++) {
+
+            password +=
+                characters[randomValues[i] % characters.length];
+        }
+
+        result.textContent = password;
+    }
+
+
+    function copyPassword() {
+
+        const password =
+            document.getElementById("passwordResult").textContent;
+
+        if (
+            !password ||
+            password === "Your password will appear here."
+        ) {
+            return;
+        }
+
+        if (navigator.clipboard) {
+
+            navigator.clipboard.writeText(password)
+                .then(() => {
+                    alert("Password copied!");
+                })
+                .catch(() => {
+                    fallbackCopy(password);
+                });
+
+        } else {
+
+            fallbackCopy(password);
+        }
+    }
+
+
+    function fallbackCopy(text) {
+
+        const textarea =
+            document.createElement("textarea");
+
+        textarea.value = text;
+
+        document.body.appendChild(textarea);
+
+        textarea.select();
+
+        document.execCommand("copy");
+
+        document.body.removeChild(textarea);
+
+        alert("Password copied!");
+    }
+
+</script>
+
+</body>
+</html>
