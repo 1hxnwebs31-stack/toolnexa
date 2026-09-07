@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://1hxnwebs31-stack.github.io/toolnexa/sitemap.xml
