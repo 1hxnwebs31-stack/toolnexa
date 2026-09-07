@@ -4,23 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ToolNexa – Free Online Tools</title>
+  <title>Free Online Tools – Age, EMI, BMI, QR & More | ToolNexa</title>
 
   <meta name="description" content="ToolNexa offers free online tools including Age Calculator, Percentage Calculator, Word Counter, Password Generator, EMI Calculator, BMI Calculator, Unit Converter and QR Code Generator.">
-
   <meta name="keywords" content="free online tools, age calculator, percentage calculator, word counter, password generator, EMI calculator, BMI calculator, unit converter, QR code generator">
-
   <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+
+  <link rel="canonical" href="https://1hxnwebs31-stack.github.io/toolnexa/">
 
   <meta name="google-site-verification" content="YJd2-ZvGDuBugJtvPNj1D0_FzL76JkicQVMDOYS6WQ0">
 
-  <meta property="og:title" content="ToolNexa – Free Online Tools">
-  <meta property="og:description" content="Simple and free online tools for everyday use.">
+  <meta property="og:title" content="Free Online Tools | ToolNexa">
+  <meta property="og:description" content="Simple, fast and free online calculators, converters, text tools, password tools and QR code generator.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://1hxnwebs31-stack.github.io/toolnexa/">
+  <meta property="og:site_name" content="ToolNexa">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="ToolNexa – Free Online Tools">
-  <meta name="twitter:description" content="Simple and free online tools for everyday use.">
+  <meta name="twitter:title" content="Free Online Tools | ToolNexa">
+  <meta name="twitter:description" content="Simple, fast and free online tools for everyday use.">
+  <meta name="twitter:url" content="https://1hxnwebs31-stack.github.io/toolnexa/">
+
+  <meta name="theme-color" content="#111827">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ToolNexa",
+    "url": "https://1hxnwebs31-stack.github.io/toolnexa/",
+    "description": "Simple and free online tools for everyday use."
+  }
+  </script>
 
   <style>
     * {
@@ -56,6 +72,24 @@
       color: #d1d5db;
     }
 
+    nav {
+      background: #1f2937;
+      padding: 12px 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px 8px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     .intro {
       max-width: 900px;
       margin: 25px auto 5px;
@@ -70,7 +104,8 @@
 
     .intro p {
       color: #666;
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 17px;
     }
 
     .container {
@@ -235,6 +270,11 @@
       .qr-buttons {
         flex-direction: column;
       }
+
+      nav a {
+        font-size: 13px;
+        margin: 4px 5px;
+      }
     }
   </style>
 </head>
@@ -246,20 +286,34 @@
   <p>Simple & Free Online Tools</p>
 </header>
 
+<nav aria-label="Tool navigation">
+  <a href="#age-calculator">Age</a>
+  <a href="#percentage-calculator">Percentage</a>
+  <a href="#word-counter">Word Counter</a>
+  <a href="#password-generator">Password</a>
+  <a href="#emi-calculator">EMI</a>
+  <a href="#bmi-calculator">BMI</a>
+  <a href="#unit-converter">Converter</a>
+  <a href="#qr-generator">QR Code</a>
+</nav>
+
 <div class="intro">
   <h2>Free Online Tools</h2>
   <p>
-    Use simple, fast and free online tools for calculations,
-    conversions, passwords, text and QR codes.
+    ToolNexa provides simple, fast and free online tools for everyday tasks.
+    Calculate age, percentages, EMI and BMI, count words, generate passwords,
+    convert units and create QR codes directly in your browser.
   </p>
 </div>
 
 <div class="container">
 
   <!-- AGE CALCULATOR -->
-  <div class="tool-card">
+  <div class="tool-card" id="age-calculator">
     <h2>🎂 Age Calculator</h2>
-    <p>Calculate your exact age in years, months and days.</p>
+    <p>
+      Calculate your exact age in years, months and days using your date of birth.
+    </p>
 
     <label>Date of Birth</label>
     <input type="date" id="dob">
@@ -271,11 +325,12 @@
     </div>
   </div>
 
-
   <!-- PERCENTAGE CALCULATOR -->
-  <div class="tool-card">
+  <div class="tool-card" id="percentage-calculator">
     <h2>📊 Percentage Calculator</h2>
-    <p>Calculate a percentage of any number.</p>
+    <p>
+      Calculate a percentage of any number quickly and easily.
+    </p>
 
     <label>Percentage (%)</label>
     <input type="number" id="percent" placeholder="Example: 20">
@@ -290,13 +345,15 @@
     </div>
   </div>
 
-
   <!-- WORD COUNTER -->
-  <div class="tool-card">
+  <div class="tool-card" id="word-counter">
     <h2>📝 Word Counter</h2>
-    <p>Count words, characters and sentences instantly.</p>
+    <p>
+      Count words, characters and sentences instantly while you type or paste text.
+    </p>
 
     <label>Your Text</label>
+
     <textarea
       id="wordText"
       oninput="countWords()"
@@ -312,11 +369,13 @@
     <button onclick="clearText()">Clear Text</button>
   </div>
 
-
   <!-- PASSWORD GENERATOR -->
-  <div class="tool-card">
+  <div class="tool-card" id="password-generator">
     <h2>🔐 Password Generator</h2>
-    <p>Create a strong random password.</p>
+    <p>
+      Create a strong random password with uppercase letters, lowercase letters,
+      numbers and symbols.
+    </p>
 
     <label>Password Length</label>
 
@@ -370,9 +429,8 @@
     </button>
   </div>
 
-
   <!-- EMI CALCULATOR -->
-  <div class="tool-card">
+  <div class="tool-card" id="emi-calculator">
     <h2>💰 EMI Calculator</h2>
     <p>
       Calculate your monthly loan EMI, total interest and total payment.
@@ -401,9 +459,8 @@
     </div>
   </div>
 
-
   <!-- BMI CALCULATOR -->
-  <div class="tool-card">
+  <div class="tool-card" id="bmi-calculator">
     <h2>⚖️ BMI Calculator</h2>
     <p>
       Calculate your Body Mass Index using your height and weight.
@@ -424,9 +481,8 @@
     </div>
   </div>
 
-
   <!-- UNIT CONVERTER -->
-  <div class="tool-card">
+  <div class="tool-card" id="unit-converter">
     <h2>🔄 Unit Converter</h2>
     <p>
       Convert length, weight and temperature units easily.
@@ -458,11 +514,9 @@
     </div>
   </div>
 
-
   <!-- QR CODE GENERATOR -->
-  <div class="tool-card">
+  <div class="tool-card" id="qr-generator">
     <h2>📱 QR Code Generator</h2>
-
     <p>
       Generate a QR code for text, website URLs, messages or other information.
     </p>
@@ -485,10 +539,9 @@
     </div>
   </div>
 
-
   <!-- ABOUT US -->
-  <div class="about-box">
-    <h2>ℹ️ About Us</h2>
+  <div class="about-box" id="about">
+    <h2>ℹ️ About ToolNexa</h2>
 
     <p>
       Welcome to ToolNexa, a simple and free online tools website
@@ -496,26 +549,24 @@
     </p>
 
     <p>
-      ToolNexa provides useful tools such as Age Calculator,
-      Percentage Calculator, Word Counter, Password Generator,
-      EMI Calculator, BMI Calculator, Unit Converter and
-      QR Code Generator.
+      ToolNexa provides useful online tools including an Age Calculator,
+      Percentage Calculator, Word Counter, Password Generator, EMI Calculator,
+      BMI Calculator, Unit Converter and QR Code Generator.
     </p>
 
     <p>
-      Our goal is to provide simple, fast and easy-to-use tools
-      that work directly in your web browser.
+      Our goal is to provide simple, fast and easy-to-use tools that work
+      directly in your web browser.
     </p>
 
     <p>
-      ToolNexa is continuously improving and new useful tools
-      may be added in the future.
+      ToolNexa is continuously improving and new useful tools may be added
+      in the future.
     </p>
   </div>
 
-
   <!-- CONTACT US -->
-  <div class="about-box">
+  <div class="about-box" id="contact">
     <h2>📩 Contact Us</h2>
 
     <p>
@@ -531,9 +582,8 @@
     </a>
   </div>
 
-
   <!-- PRIVACY POLICY -->
-  <div class="about-box">
+  <div class="about-box" id="privacy">
     <h2>🔒 Privacy Policy</h2>
 
     <p>
@@ -588,11 +638,9 @@
 
 </div>
 
-
 <footer>
   © 2026 ToolNexa. All rights reserved.
 </footer>
-
 
 <script>
 
@@ -606,10 +654,8 @@
       document.getElementById("ageResult");
 
     if (!dobInput) {
-
       result.innerHTML =
         "Please enter your date of birth.";
-
       return;
     }
 
@@ -620,10 +666,8 @@
       new Date();
 
     if (dob > today) {
-
       result.innerHTML =
         "Date of birth cannot be in the future.";
-
       return;
     }
 
@@ -657,7 +701,6 @@
     if (months < 0) {
 
       years--;
-
       months += 12;
     }
 
@@ -775,7 +818,6 @@
     if (
       document.getElementById("uppercase").checked
     ) {
-
       characters +=
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
@@ -783,7 +825,6 @@
     if (
       document.getElementById("lowercase").checked
     ) {
-
       characters +=
         "abcdefghijklmnopqrstuvwxyz";
     }
@@ -791,7 +832,6 @@
     if (
       document.getElementById("numbers").checked
     ) {
-
       characters +=
         "0123456789";
     }
@@ -799,7 +839,6 @@
     if (
       document.getElementById("symbols").checked
     ) {
-
       characters +=
         "!@#$%^&*()_+-=[]{}|;:,.<>?";
     }
@@ -1044,7 +1083,6 @@
   const units = {
 
     length: {
-
       Meter: 1,
       Kilometer: 1000,
       Centimeter: 0.01,
@@ -1056,7 +1094,6 @@
     },
 
     weight: {
-
       Kilogram: 1,
       Gram: 0.001,
       Milligram: 0.000001,
@@ -1065,7 +1102,6 @@
     },
 
     temperature: {
-
       Celsius: "C",
       Fahrenheit: "F",
       Kelvin: "K"
@@ -1085,7 +1121,6 @@
       document.getElementById("toUnit");
 
     from.innerHTML = "";
-
     to.innerHTML = "";
 
     Object.keys(units[type])
@@ -1227,10 +1262,9 @@
       encodeURIComponent(text);
 
     result.innerHTML =
-
       '<img src="' +
       currentQRUrl +
-      '" alt="Generated QR Code">' +
+      '" alt="Generated QR Code by ToolNexa">' +
 
       '<div class="qr-buttons">' +
 
@@ -1327,4 +1361,4 @@
 </script>
 
 </body>
-</html>
+  </html>
